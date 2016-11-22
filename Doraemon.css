@@ -2,14 +2,25 @@
     margin: 0;
     padding: 0;
 }
+.clearfix {
+    content: '';
+    clear: both;
+    display: block;
+}
 body {
     background: #add8e6;
 }
 .dora {
     position: relative;
+    top: 100px;
+    height: 100%;
+    width: 100%;
+}
+.head {
+    position: relative;
     height: 350px;
     width: 400px;
-    margin: 100px auto;
+    margin: 0 auto;
     background: #008ee3;
     border-radius: 50% 50% 25% 25%/55% 55% 45% 45%;
 }
@@ -18,7 +29,7 @@ body {
     height: 260px;
     width: 310px;
     background: #fff;
-    margin:auto;
+    margin: 0 auto;
     top: 90px;
     border-radius: 50% 50% 25% 25%/55% 55% 45% 45%;
 }
@@ -30,19 +41,215 @@ body {
     background: #fff;
     border-radius: 50%;
     top: -40px;
-    float: left;
     z-index: 50;
-}
-.eyes-left {
+    float: left;
     left: 71px;
 }
-.eyes-left:first-child {
-    position: relative;
+.eyes-left div,.eyes-right div{
+    position: absolute;
     height: 25px;
     width: 20px;
+    border-radius: 50%;
     background: #000;
     border: 0;
-    left: 155px;
-    top: 0;
+    top: 45px;
     z-index: 55;
+}
+.eyes-left div{
+    left: 60px;
+    transition: 1s;
+}
+.eyes-left div div,.eyes-right div div{
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background: #fff;
+    border-radius: 50%;
+    top: 7px;
+}
+.eyes-left div div{
+    left: 10px;
+}
+.nose1 {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    background: #c70000;
+    left: 185px;
+    top: -128px;
+    border-radius: 50%;
+}
+.nose1 div {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background: snow;
+    border-radius: 50%;
+    left: 20px;
+    top: 10px;
+}
+.nose2 {
+    position: relative;
+    height: 130px;
+    width: 2px;
+    background: #000000;
+    top: -128px;
+    left: 199px;
+}
+.beard {
+    position: relative;
+    width: 340px;
+    height: 80px;
+    /*top: -200px;*/
+    margin: -200px auto 0;
+}
+.beard .left ,.beard .right {
+    position: absolute;
+}
+.beard .left div:nth-child(1){
+    height: 33px;
+    width: 116px;
+    border-top: 2px solid #000;
+    border-radius: 10% 90% 0 0/11% 100% 0 0;
+}
+.beard .left div:nth-child(2){
+    position: absolute;
+    top: 30px;
+    height: 26px;
+    width: 116px;
+    border-top: 2px solid #000;
+    border-radius: 10% 90% 0 0/42% 100% 0 0;
+}
+.beard .left div:nth-child(3){
+    position: absolute;
+    top: 56px;
+    height: 26px;
+    width: 116px;
+    border-top: 2px solid #000;
+    border-radius: 10% 90% 0 0/42% 100% 0 0;
+}
+.beard .right div:nth-child(1){
+    height: 33px;
+    width: 116px;
+    border-top: 2px solid #000;
+    border-radius: 90% 10% 0 0/100% 11% 0 0;
+}
+.beard .right {
+    right: 0;
+}
+.beard .right div:nth-child(2){
+    position: absolute;
+    height: 26px;
+    width: 116px;
+    top: 30px;
+    right: 0;
+    border-top: 2px solid #000;
+    border-radius: 90% 10% 0 0/100% 42% 0 0;
+}
+.beard .right div:nth-child(3){
+    position: absolute;
+    top: 56px;
+    right: 0;
+    height: 26px;
+    width: 116px;
+    border-top: 2px solid #000;
+    border-radius: 90% 10% 0 0/100% 42% 0 0;
+}
+.mouth {
+    position: relative;
+    width: 250px;
+    height: 200px;
+    border-bottom: 2px solid #000;
+    border-radius: 50%;
+    margin: -100px auto;
+}
+.neck {
+    /*position: relative;*/
+    width: 330px;
+    height: 200px;
+    background: #e30000;
+    margin: -160px auto;
+    z-index: 60;
+    border-radius: 50% 50% 20% 20%/50% 50% 50% 50%;
+}
+.neck div:nth-child(1) {
+    position: relative;
+    width: 60px;
+    height: 4px;
+    background: #fff;
+    z-index: 100;
+    top: 180px;
+    left: 60px;
+    border-radius: 2px;
+}
+.neck .bell{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: #ffdd2e;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    margin: 0 auto;
+    top: 174px;
+    z-index: 100;
+    transition: 2s;
+    -moz-transition: 2s; /* Firefox 4 */
+    -webkit-transition: 2s; /* Safari ºÍ Chrome */
+    -o-transition: 2s;
+}
+.neck .bell div:nth-child(1){
+    position: absolute;
+    height: 5px;
+    width: 44px;
+    background: #ffdd2e;
+    border: 2px solid #000;
+    border-radius: 4px;
+    top: 11px;
+    left: -4px;
+    margin: 0 auto;
+    z-index: 101;
+    transition: 2s;
+    -moz-transition: 2s; /* Firefox 4 */
+    -webkit-transition: 2s; /* Safari ºÍ Chrome */
+    -o-transition: 2s;
+}
+.neck .bell div:nth-child(2){
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #000;
+    background: #6c5844;
+    border-radius: 50%;
+    top: 23px;
+    left: 14px;
+    transition: 2s;
+    -moz-transition: 2s; /* Firefox 4 */
+    -webkit-transition: 2s; /* Safari ºÍ Chrome */
+    -o-transition: 2s;
+}
+.neck .bell div:nth-child(3){
+    position: absolute;
+    width: 2px;
+    height: 8px;
+    background: #000000;
+    top: 34px;
+    left: 19px;
+}
+.head:hover .eyes-left div{
+    left: 0;
+}
+.neck:hover .bell {
+    position: relative;
+    -ms-transform-origin: 20px 0;
+    -webkit-transform-origin: 20px 0;
+    -moz-transform-origin: 20px 0;
+    -o-transform-origin: 20px 0;
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+}
+.mouth:hover{
+    width: 150px;
+    border-radius: 0;
 }
